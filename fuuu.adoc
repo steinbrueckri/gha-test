@@ -1,0 +1,36 @@
+.Title
+[%collapsible]
+====
+Normal asciidoc markup here
+====
+
+
+[NOTE]
+====
+Think of c1..c2 as _all commits as of c1 (not including c1) until commit
+c2._
+====
+
+[TIP]
+====
+Think of c1..c2 as _all commits as of c1 (not including c1) until commit
+c2._
+====
+
+[IMPORTANT]
+====
+Think of c1..c2 as _all commits as of c1 (not including c1) until commit
+c2._
+====
+
+[WARNING]
+====
+Think of c1..c2 as _all commits as of c1 (not including c1) until commit
+c2._
+====
+
+[CAUTION]
+====
+Think of c1..c2 as _all commits as of c1 (not including c1) until commit
+c2._
+====
