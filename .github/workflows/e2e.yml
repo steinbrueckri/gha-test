@@ -1,0 +1,24 @@
+on:
+  schedule:
+    - cron: "5 4 * * *"
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment to run tests against"
+        required: true
+        default: "https://ci.userlike.com"
+        type: choice
+        options:
+          - https://userlike.com
+          - https://ci.userlike.com
+          - https://staging.userlike.com
+
+jobs:
+  log-the-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Environment: $ENVIRONMENT"
+        env:
+          # use the input environment if defined of ci.userlike.com as default
+          ENVIRONMENT: ${{ inputs.environment || 'https://ci.userlike.com' }}
